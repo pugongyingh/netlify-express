@@ -8,10 +8,6 @@ const bodyParser = require('body-parser');
 
 var typeorm = require('typeorm');
 
-typeorm.createConnection({
-  type: 'sqlite',
-  database: `${__dirname}/db.sqlite`
-});
 
 
 const router = express.Router();
