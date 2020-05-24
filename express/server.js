@@ -11,7 +11,7 @@ const Match = require('./models/Match')
 const User = require('./models/User')
 const Bet = require('./models/Bet')
 
-  const Bett typeorm.createConnection({
+  typeorm.createConnection({
     type: "sqlite",
     database: "./db.sqlite",
     synchronize: true,
