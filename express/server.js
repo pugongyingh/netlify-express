@@ -5,6 +5,15 @@ const serverless = require('serverless-http');
 const app = express();
 const bodyParser = require('body-parser');
 
+
+var typeorm = require('typeorm');
+
+typeorm.createConnection({
+  type: 'sqlite',
+  database: `${__dirname}/db.sqlite`
+});
+
+
 const router = express.Router();
 router.get('/', (req, res) => {
   res.writeHead(200, { 'Content-Type': 'text/html' });
