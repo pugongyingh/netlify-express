@@ -5,11 +5,11 @@ const serverless = require('serverless-http');
 const app = express();
 const bodyParser = require('body-parser');
 
-const typeorm = require('typeorm')
+const typeorm = require('typeorm');
 const EntitySchema = typeorm.EntitySchema;
-const Match = require('./models/Match')
-const User = require('./models/User')
-const Bet = require('./models/Bet')
+const Match = require('./models/Match');
+const User = require('./models/User');
+const Bet = require('./models/Bet');
 
   typeorm.createConnection({
     type: "sqlite",
@@ -20,7 +20,7 @@ const Bet = require('./models/Bet')
       new EntitySchema(User),
       new EntitySchema(Bet) 
     ]
-  })
+  });
 
 const router = express.Router();
 router.get('/', (req, res) => {
